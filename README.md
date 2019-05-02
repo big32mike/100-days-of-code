@@ -11,5 +11,5 @@ Completed the 2 ORM mapping labs.
 - we leave id (or any autoincremented field) nil during object initialization so we can set it later
 - we turn db rows into Ruby objects
 
-[ORM mapping to table lab](https://github.com/big32mike/orm-mapping-to-table-lab-online-web-pt-021119/blob/master/lib/student.rb)
+[ORM mapping to table lab](https://github.com/big32mike/orm-mapping-to-table-lab-online-web-pt-021119/blob/master/lib/student.rb)  
 [ORM mapping db to Ruby object lab](https://github.com/big32mike?tab=repositories)
