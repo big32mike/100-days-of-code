@@ -37,3 +37,20 @@ Completed Dynamic ORMs lab
 - Using self.class to refer to class methods inside instance methods
 - ORM insert methods ignore nil columns, since the id hasn't been generated yet
 - ORM update methods ignore the id column. since it's an attr_accessor due to metaprogramming, we account for it here so we don't overwrite the original value.
+
+### Day 4: May 4th, 2019
+Completed Dynamic ORMs with Inheritance
+- Why is it useful to have a generic ORM class that others can inherit from?
+ - We don't have to code useful methods like find_by_name or save, we can just inherit from a generic super class.
+- Describe the code used to construct such a class
+ - Uses class methods and the self keyword to extract the sub class names.
+- The .find_by_name method in the lab has a typo
+ - `sql = "SELECT * FROM #{self.table_name} WHERE name = '?'"`
+ - The '?' gets treated as a string literal instead of a bind parameter
+ - several mentions of `bind_param` in the traceback, which is a clue.
+
+### Day 5: May 5th, 2019
+Watched an ORM scraping video, and got the most useful explanation of the #tap method
+- `self.new.tap {|room| room.id = id}` #tap returns the object to the left of it, but it gives you access to it as a block scoped variable. It eliminates the need for a dangling return.
+Finished ORM section, started on ActiveRecord
+- the #send method allows us to access instance variables programmatically.
